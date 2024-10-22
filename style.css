@@ -1,0 +1,445 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: auto;
+    background-image: url(/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: #84dddc;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+/* Header Section */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #00796b;
+    color: #fff;
+    text-align: center;
+    padding: 2rem 5%;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2.0rem;
+    color: #0ef;
+    font-weight: 600;
+    cursor: default;
+}
+
+/*Navigation*/
+nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px;
+    text-align: top;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.nav-menu ul {
+    list-style: none;
+}
+
+.nav-menu ul li {
+    position: none;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+    background: #0ef;
+    border-radius: 5px;
+}
+
+/*DropDown*/
+
+
+.dropdown {
+    display: none; /* Hide dropdown by default */
+    position: absolute;
+    top: 100%; /* Position the dropdown just below the parent */
+    left: 0;
+    background-color: #030e07a6;
+    min-width: 150px;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    z-index: 1;
+}
+
+.dropdown li a {
+    padding: 10px 15px;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    background-color: #030e07a6; /* Background for dropdown items */
+    white-space: nowrap;    /* Prevent text from wrapping */
+}
+
+.dropdown li a:hover {
+    background-color: #0088324b; /* Highlight effect on hover */
+}
+
+/* Show dropdown on hover */
+.nav-menu li:hover > .dropdown {
+    display: block; /* Show dropdown when hovering over the parent menu item */
+}
+
+/* Adjustments to align the dropdown under the parent */
+.nav-menu li:hover > a {
+    background-color: #0088324b; /* Change the parent item background when dropdown is active */
+}
+
+header nav ul li:hover > .dropdown {
+    display: block;
+}
+
+header nav ul li:hover > a {
+    background-color: #0088324b;
+    border-radius: 5px;
+}
+
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    align-content: end;
+}
+
+header nav ul li {
+    margin: 0 10px;
+}
+
+header nav li {
+    list-style: none;
+}
+header nav li a {
+    display: inline-block;
+    color: #fff;
+    font-weight: 400;
+    margin-left: 20px;
+    text-decoration: none;
+    align-items: end;
+}
+
+
+
+.header nav li a:hover,
+.header nav li a.active{
+    color: #030e07a6;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 1px;
+}
+
+header p {
+    font-style: italic;
+}
+
+header a img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 1px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: red;
+    display: none;
+}
+
+
+/* Sections */
+
+.home h2 {
+    color: #00796b;
+    color:#fff;
+    margin-top: 1px;
+}
+
+.home {
+    background-color: #030e07a6;
+}
+
+.home h2 {
+    padding: 2rem 9%;
+    margin-top: 100px;
+    color: #fff;
+}
+.home p {
+    color: #fff;
+    padding: 1px 100px 1px 100px;
+    font-weight: 700;
+    font-size: 1.6rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Product Grid */
+.products {
+    background-color: #0088324b;
+    padding: 20px;
+}
+
+.products h2 {
+    color: #fff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.product img {
+    width: 500px;
+    height: 400px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product h2 {
+    margin-bottom: 4rem;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    background: #030e07a6;
+    padding-top: 50px;
+}
+
+.about h2 {
+    margin: 2px;
+}
+
+.about-img img {
+    width: 25vw;                    /* Width will adjust to 25% of the viewport width */
+    height: 500px;                  /* Fixed height */
+    border-radius: 18px;            /* Rounds the corners */
+    object-fit: cover;              /* Ensures the image covers the area without being stretched */
+    
+    animation: floatImage 5s ease-in-out infinite;
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.heading {
+    text-align: center;
+    font-size: 3.5rem;
+}
+
+.about-content {
+    align-items: center;
+    color: #fff;
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-content p {
+    font-size: 1.3rem;
+    margin: 1rem 0 1rem;
+}
+
+span {
+    color: #0ef;
+}
+
+.contact {
+    background-color: #030e07a6;
+}
+
+.contact h2 {
+    margin: 2rem;
+    color: #fff;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    background: #fff;
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.contact form .input-box input {
+    width: 49%;
+}
+
+.contact form textarea {
+    resize: none;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+button {
+    background-color: #00796b;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0ef;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+    background-color: #00796b;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba(0,0,0,.2);
+        box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+        display: none;
+    }
+
+    .nav-menu.active {
+        display: block;
+    }
+
+    .nav-menu a {
+        display: block;
+        font-size: 2rem;
+        margin: 3rem 0;
+    }
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem; 
+    }
+
+    .about {
+        flex-direction: column-reverse;
+    }
+
+    .about-img {
+        width: 70vw;
+        margin-top: 4rem;
+    }
+
+    .product h2 {
+        margin-bottom: 3rem;
+    }
+
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
